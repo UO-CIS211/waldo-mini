@@ -33,9 +33,9 @@ class TestAE(unittest.TestCase):
                                                [Waldo, Other, Other]]))
 
         # Vacuous: No rows
-        self.assertFalse(all_col_exists_waldo([]))
+        self.assertTrue(all_col_exists_waldo([]))
         # Vacuous: No columns
-        self.assertFalse(all_col_exists_waldo([[],[]]))
+        self.assertTrue(all_col_exists_waldo([[],[]]))
 
 class TestAA(unittest.TestCase):
     """For all x, for all y . P(y)"""
