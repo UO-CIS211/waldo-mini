@@ -1,6 +1,7 @@
 """Universal and existential quantifiers """
 
 import unittest
+
 from waldo import *
 
 
@@ -8,7 +9,7 @@ class TestAE(unittest.TestCase):
     """For all x, there exists y . P(y)"""
 
     # By row
-    def test_exists_waldo_every_row(self):
+    def test_all_row_exists_waldo(self):
         """For all rows in matrix, there exists a Waldo in the row"""
         self.assertTrue(all_row_exists_waldo([[Other, Other, Waldo],
                                               [Waldo, Other, Other],
@@ -22,7 +23,7 @@ class TestAE(unittest.TestCase):
         self.assertFalse(all_row_exists_waldo([[],[]]))
 
     # By column
-    def test_exists_waldo_every_col(self):
+    def test_all_col_exists_waldo(self):
         """For all columns in the matrix, there exists a Waldo in the column"""
         self.assertTrue(all_col_exists_waldo([[Other, Waldo, Other],
                                               [Waldo, Other, Other],
@@ -134,7 +135,3 @@ class TestEA(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-
-
-
